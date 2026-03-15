@@ -2,8 +2,179 @@
 
 <html>
 <head>
+
 <title>D Square Computers</title>
-<link rel="stylesheet" href="style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b1f3a;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:18px 8%;
+background:#07152b;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav li{
+margin-left:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+nav a:hover{
+color:#ff3b3b;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1518770660439-4636190af475") center/cover;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.btn{
+margin-top:25px;
+background:#ff3b3b;
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+}
+
+/* SECTIONS */
+
+section{
+padding:100px 8%;
+text-align:center;
+}
+
+/* SERVICES */
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#122a52;
+border-radius:10px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+}
+
+/* BRANDS */
+
+.brands{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+.brands img{
+height:45px;
+filter:grayscale(100%);
+opacity:.7;
+}
+
+.brands img:hover{
+filter:none;
+opacity:1;
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:40px;
+text-align:left;
+}
+
+footer{
+background:#07152b;
+padding:60px 8%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+}
+
+.footer-bottom{
+margin-top:30px;
+text-align:center;
+color:#777;
+}
+
+@media(max-width:768px){
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
@@ -13,30 +184,32 @@
 <h2>D Square Computers</h2>
 
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="brands.html">Brands</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="contact.html">Contact</a></li>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#brands">Brands</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
 
-<div class="hero">
+<section id="home" class="hero">
 
 <h1>Computer Service in Chennai</h1>
 
 <p>Laptop Repair • Desktop Service • CCTV Installation</p>
 
-<a class="btn" href="contact.html">Book Service</a>
+<a class="btn" href="#contact">Book Service</a>
 
-</div>
+</section>
 
-<section>
+<section id="services">
 
-<h2>Our Core Services</h2>
+<h2>Our Services</h2>
 
-<div class="grid">
+<div class="service-grid">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
@@ -57,40 +230,125 @@
 
 </section>
 
+<section id="brands">
+
+<h2>Brands We Deal With</h2>
+
+<div class="brands">
+
+<img src="logos/hp.png">
+<img src="logos/dell.png">
+<img src="logos/lenovo.png">
+<img src="logos/acer.png">
+<img src="logos/asus.png">
+<img src="logos/intel.png">
+<img src="logos/seagate.png">
+<img src="logos/wd.png">
+<img src="logos/logitech.png">
+<img src="logos/samsung.png">
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>About Us</h2>
+
+<p>
+
+D Square Computers is a trusted computer service provider in Chennai,
+offering laptop repair, desktop service, networking solutions
+and CCTV installation.
+
+</p>
+
+</section>
+
+<section id="contact">
+
+<h2>Visit Our Store</h2>
+
+<div class="contact-grid">
+
+<div>
+
+<p>
+
+D Square Computers<br>
+#11 V.O.C Nagar<br>
+11th Cross Street<br>
+Thirumullaivoyal<br>
+Chennai – 600062
+
+</p>
+
+<p>📞 98411 94100</p>
+
+</div>
+
+<div>
+
+<iframe
+src="https://www.google.com/maps?q=Thirumullaivoyal%20Chennai&output=embed"
+width="100%"
+height="300"
+style="border:0">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
 <footer>
 
 <div class="footer-grid">
 
 <div>
+
 <h3>D Square Computers</h3>
-<p>Professional computer repair and CCTV installation services in Chennai.</p>
+
+<p>
+Professional laptop repair and CCTV installation in Chennai.
+</p>
+
 </div>
 
 <div>
+
 <h4>Quick Links</h4>
+
 <p>Home</p>
 <p>Services</p>
 <p>Contact</p>
+
 </div>
 
 <div>
+
 <h4>Services</h4>
+
 <p>Laptop Repair</p>
 <p>Desktop Service</p>
 <p>CCTV Installation</p>
+
 </div>
 
 <div>
+
 <h4>Contact</h4>
+
 <p>📞 98411 94100</p>
-<p>Computer Service in Chennai</p>
+
 </div>
 
 </div>
 
 <div class="footer-bottom">
 
-© 2026 D Square Computers
+© 2026 D Square Computers • Chennai
 
 </div>
 

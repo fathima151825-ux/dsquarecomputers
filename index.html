@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>D Square Computers</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -28,22 +29,29 @@ color:white;
 
 nav{
 position:fixed;
+top:0;
 width:100%;
 display:flex;
 justify-content:space-between;
-padding:20px 8%;
-background:#020617;
+align-items:center;
+padding:18px 8%;
+background:#07152b;
 z-index:1000;
+}
+
+nav h2{
+color:white;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
+font-size:14px;
 }
 
 nav a:hover{
-color:#3ea6ff;
+color:#ff3b3b;
 }
 
 /* HERO */
@@ -53,13 +61,14 @@ height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
+align-items:center;
 text-align:center;
 background:url("https://images.unsplash.com/photo-1518770660439-4636190af475") center/cover;
 }
 
 .hero h1{
 font-size:60px;
-background:linear-gradient(#fff,#3ea6ff);
+background:linear-gradient(#fff,#ff3b3b);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
@@ -67,20 +76,19 @@ background:linear-gradient(#fff,#3ea6ff);
 .hero p{
 margin-top:10px;
 font-size:18px;
-color:#ccc;
+color:#ddd;
 }
 
-.btn{
+.hero a{
 margin-top:25px;
-display:inline-block;
+background:#ff3b3b;
 padding:14px 28px;
-background:#ff7a18;
-color:white;
 border-radius:30px;
 text-decoration:none;
+color:white;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
 padding:100px 8%;
@@ -89,9 +97,9 @@ text-align:center;
 
 /* SERVICES */
 
-.cards{
+.services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
 margin-top:40px;
 }
@@ -100,6 +108,11 @@ margin-top:40px;
 background:#122a52;
 border-radius:12px;
 overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
 }
 
 .card img{
@@ -124,8 +137,8 @@ margin-top:40px;
 
 .brands img{
 height:45px;
-opacity:.7;
 filter:grayscale(100%);
+opacity:.7;
 }
 
 .brands img:hover{
@@ -155,10 +168,49 @@ border-radius:10px;
 overflow:hidden;
 }
 
-footer{
-padding:40px;
+/* FOOTER */
+
+.footer{
+background:#07152b;
+padding:70px 8% 40px;
+margin-top:60px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+}
+
+.footer h3,
+.footer h4{
+color:white;
+margin-bottom:15px;
+}
+
+.footer ul{
+list-style:none;
+}
+
+.footer ul li{
+margin-bottom:10px;
+}
+
+.footer a{
+color:#bbb;
+text-decoration:none;
+}
+
+.footer a:hover{
+color:#ff3b3b;
+}
+
+.footer-bottom{
 text-align:center;
-color:#aaa;
+margin-top:40px;
+border-top:1px solid #1a345f;
+padding-top:20px;
+color:#777;
 }
 
 </style>
@@ -169,7 +221,7 @@ color:#aaa;
 
 <nav>
 
-<b>D Square Computers</b>
+<h2>D Square Computers</h2>
 
 <div>
 <a href="#home">Home</a>
@@ -181,13 +233,13 @@ color:#aaa;
 
 </nav>
 
-<section class="hero" id="home">
+<section id="home" class="hero">
 
 <h1>Computer Service in Chennai</h1>
 
 <p>Laptop • Desktop • Networking • CCTV Installation</p>
 
-<a class="btn" href="#contact">Book Service</a>
+<a href="#contact">Book Service</a>
 
 </section>
 
@@ -195,7 +247,7 @@ color:#aaa;
 
 <h2>Our Services</h2>
 
-<div class="cards">
+<div class="services">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
@@ -243,8 +295,8 @@ color:#aaa;
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
 <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
 <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45">
 <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
 
@@ -272,15 +324,81 @@ Chennai - 600062
 
 <iframe 
 src="https://www.google.com/maps?q=Thirumullaivoyal%20Chennai&output=embed"
-width="100%" height="400" style="border:0"></iframe>
+width="100%" height="400" style="border:0">
+</iframe>
 
 </div>
 
 </section>
 
-<footer>
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>D Square Computers</h3>
+
+<p>
+Professional laptop repair, desktop service,
+networking and CCTV installation in Chennai.
+</p>
+
+</div>
+
+<div>
+
+<h4>Quick Links</h4>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#brands">Brands</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>Services</h4>
+
+<ul>
+
+<li>Laptop Repair</li>
+<li>Desktop Service</li>
+<li>CCTV Installation</li>
+<li>Networking Setup</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>Get In Touch</h4>
+
+<p>
+
+D Square Computers<br>
+Thirumullaivoyal<br>
+Chennai
+
+</p>
+
+<p>📞 98411 94100</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
 
 © 2026 D Square Computers • Chennai
+
+</div>
 
 </footer>
 

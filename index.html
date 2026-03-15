@@ -1,57 +1,241 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>D Square Computers</title>
-<link rel="stylesheet" href="style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:linear-gradient(135deg,#020617,#0b1f3a);
+color:white;
+}
+
+/* NAV */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+align-items:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:15px;
+opacity:.8;
+}
+
+nav a:hover{
+opacity:1;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+flex-direction:column;
+}
+
+.hero h1{
+font-size:58px;
+background:linear-gradient(#ffffff,#3ea6ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:15px;
+color:#aaa;
+}
+
+.btn{
+margin-top:25px;
+background:#3ea6ff;
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+}
+
+/* SERVICES */
+
+.section{
+padding:100px 8%;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:18px;
+padding:30px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border:1px solid #3ea6ff;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* BRANDS */
+
+.brands{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:50px;
+}
+
+.brands img{
+height:40px;
+opacity:.6;
+filter:grayscale(100%);
+}
+
+.brands img:hover{
+opacity:1;
+filter:none;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+color:#777;
+}
+
+</style>
+
 </head>
 
 <body>
 
 <nav>
-<div><b>D Square Computers</b></div>
+
+<h3>D Square Computers</h3>
+
 <div>
+
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="brands.html">Brands</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
+
 </div>
+
 </nav>
 
-<div class="container">
+<section class="hero">
 
 <h1>Premium Computer Service</h1>
 
 <p>Desktop • Laptop • Networking • CCTV Installation</p>
 
-<div class="grid">
+<a class="btn" href="contact.html">Book Service</a>
+
+</section>
+
+
+<section class="section">
+
+<h2>Our Services</h2>
+
+<div class="cards">
 
 <div class="card">
-<h3>Desktop Repair</h3>
-<p>Professional desktop service and upgrades.</p>
-</div>
 
-<div class="card">
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+
 <h3>Laptop Repair</h3>
-<p>All brand laptop servicing.</p>
+
+<p>Professional repair for all laptop brands.</p>
+
 </div>
 
 <div class="card">
-<h3>Custom PC Build</h3>
-<p>High performance custom PC builds.</p>
+
+<img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45">
+
+<h3>Desktop Service</h3>
+
+<p>Upgrade and maintenance of desktop systems.</p>
+
 </div>
 
 <div class="card">
+
+<img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
+
 <h3>CCTV Installation</h3>
-<p>Security camera setup for homes and offices.</p>
-</div>
+
+<p>Secure your home and office with CCTV.</p>
 
 </div>
 
 </div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Brands We Deal With</h2>
+
+<div class="brands">
+
+<img src="logos/hp.png">
+<img src="logos/dell.png">
+<img src="logos/lenovo.png">
+<img src="logos/acer.png">
+<img src="logos/asus.png">
+<img src="logos/intel.png">
+<img src="logos/seagate.png">
+<img src="logos/wd.png">
+<img src="logos/logitech.png">
+<img src="logos/samsung.png">
+
+</div>
+
+</section>
 
 <footer>
-© 2026 D Square Computers
+
+© 2026 D Square Computers • Thirumullaivoyal
+
 </footer>
 
 </body>
